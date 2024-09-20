@@ -22,5 +22,8 @@ class MainActivity : AppCompatActivity() {
         fun resta(){
 
         }
+        fun multiplicacion(){
+
+        }
     }
 }
