@@ -19,5 +19,8 @@ class MainActivity : AppCompatActivity() {
         fun suma(){
             //Funcion suma
         }
+        fun resta(){
+
+        }
     }
 }
