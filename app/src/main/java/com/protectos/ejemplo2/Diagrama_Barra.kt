@@ -36,17 +36,17 @@ class Diagrama_Barra : AppCompatActivity() {
         //}
 
         // declaracion de varibles para las id del activity
-        val btnAgregar = findViewById<Button>(R.id.btnAgregar)
-        val etConcepto = findViewById<EditText>(R.id.etConcepto)
-        val etCantidad = findViewById<EditText>(R.id.etCantidad)
-        btnAgregar.setOnClickListener {
+        //val btnAgregar = findViewById<Button>(R.id.btnAgregar)
+        //val etConcepto = findViewById<EditText>(R.id.etConcepto)
+        //val etCantidad = findViewById<EditText>(R.id.etCantidad)
+        vinculo.btnAgregar.setOnClickListener {
 
             graficarPuntos(puntos)
             //limpiar EditText
-            etConcepto.setText("")
-            etConcepto.invalidate()
-            etCantidad.setText("")
-            etCantidad.invalidate()
+            vinculo.etConcepto.setText("")
+            vinculo.etConcepto.invalidate()
+            vinculo.etCantidad.setText("")
+            vinculo.etCantidad.invalidate()
         }
 
     }
