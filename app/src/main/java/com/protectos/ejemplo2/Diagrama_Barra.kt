@@ -32,8 +32,7 @@ class Diagrama_Barra : AppCompatActivity() {
            // binding.etConcepto.setText("");
             //binding.etConcepto.invalidate();
            // binding.etCantidad.setText("");
-          //  binding.etCantidad.invalidate();
-        //}
+          //  binding.etCantidad.invalidate();}
 
         // declaracion de varibles para las id del activity
         //val btnAgregar = findViewById<Button>(R.id.btnAgregar)
