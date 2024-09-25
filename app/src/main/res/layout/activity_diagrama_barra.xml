@@ -25,7 +25,7 @@
             android:layout_height="50dp"
             android:layout_margin="20dp"
             android:hint="Cantidad"
-            android:inputType="text" />
+            android:inputType="number" />
 
 
         <Button
