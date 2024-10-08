@@ -1,6 +1,8 @@
 package com.protectos.ejemplo2
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,13 +21,13 @@ class Actividad_JuegoSuma : AppCompatActivity() {
         generateQuestion()
 
         vinculo.rpta1.setOnClickListener(){
-            checkAnswer1()
+            validar(vinculo.rpta1.text.toString().toIntOrNull() ?: 0)
         }
         vinculo.rpta2.setOnClickListener(){
-            checkAnswer2()
+            validar(vinculo.rpta2.text.toString().toIntOrNull() ?: 0)
         }
         vinculo.rpta3.setOnClickListener(){
-            checkAnswer3()
+            validar(vinculo.rpta3.text.toString().toIntOrNull() ?: 0)
         }
 
     }
@@ -42,44 +44,53 @@ class Actividad_JuegoSuma : AppCompatActivity() {
         vinculo.rpta2.text = opciones[1].toString()
         vinculo.rpta3.text = opciones[2].toString()
     }
+    //
 
-    private fun checkAnswer1() {
-        var rpta= vinculo.rpta1.text.toString().toIntOrNull() ?: 0
-        validar(rpta)
-
-    }
-    private fun checkAnswer2() {
-        var rpta= vinculo.rpta2.text.toString().toIntOrNull() ?: 0
-        validar(rpta)
-
-    }
-    private fun checkAnswer3() {
-        var rpta= vinculo.rpta3.text.toString().toIntOrNull() ?: 0
-        validar(rpta)
-
-    }
+    //private fun checkAnswer1() {
+      //  var rpta= vinculo.rpta1.text.toString().toIntOrNull() ?: 0
+       // validar(rpta)    }
+    //private fun checkAnswer2() {
+      //  var rpta= vinculo.rpta2.text.toString().toIntOrNull() ?: 0
+        //validar(rpta)    }
+    //private fun checkAnswer3() {
+      //  var rpta= vinculo.rpta3.text.toString().toIntOrNull() ?: 0
+        //validar(rpta)    }
 
     private fun validar(rpta: Int) {
         if (rpta==suma) {
             correctAnswers++
 
             Toast.makeText(this, "CORRECTO", Toast.LENGTH_LONG).show()
+            vinculo.score.text = correctAnswers.toString()
+            limpiar()
 
-            generateQuestion()
+            Handler(Looper.getMainLooper()).postDelayed({
+                generateQuestion()
+            }, 300)
             if (correctAnswers == 10) {
                 Toast.makeText(this, "¡Felicidades! Has acertado 10 veces.", Toast.LENGTH_LONG).show()
                 correctAnswers = 0
+
             }
         } else {
             Toast.makeText(this, "INCORRECTO", Toast.LENGTH_LONG).show()
             //limpiar EditText
-            vinculo.rpta1.setText("")
-            vinculo.rpta1.invalidate()
-            vinculo.rpta2.setText("")
-            vinculo.rpta2.invalidate()
-            vinculo.rpta3.setText("")
-            vinculo.rpta3.invalidate()
-            generateQuestion()
+            limpiar()
+            Handler(Looper.getMainLooper()).postDelayed({
+                generateQuestion()
+            }, 300)
         }
+    }
+    fun limpiar(){
+        vinculo.btnNum1.setText("")
+        vinculo.rpta1.invalidate()
+        vinculo.btnNum2.setText("")
+        vinculo.rpta1.invalidate()
+        vinculo.rpta1.setText("")
+        vinculo.rpta1.invalidate()
+        vinculo.rpta2.setText("")
+        vinculo.rpta2.invalidate()
+        vinculo.rpta3.setText("")
+        vinculo.rpta3.invalidate()
     }
 }

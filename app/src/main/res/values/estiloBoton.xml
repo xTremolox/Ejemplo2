@@ -8,4 +8,20 @@
         <item name="android:padding">5dp</item>
 
     </style>
+    <style name="btnSumarpta">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+    <style name="btnSumarNum">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">35dp</item>
+        <item name="android:textColor">#fff</item>
+
+    </style>
+
 </resources>

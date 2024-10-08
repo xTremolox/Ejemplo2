@@ -27,6 +27,7 @@ class ActividadSuma : AppCompatActivity() {
     fun nivel1(view: View){
         val accion = Intent(this,Actividad_JuegoSuma::class.java)
         startActivity(accion)
+        overridePendingTransition(R.xml.fade_in, R.xml.fade_out)
     }
     fun Bloquedo(view: View){
         val texto = view.contentDescription.toString()

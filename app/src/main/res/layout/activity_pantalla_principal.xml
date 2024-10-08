@@ -33,6 +33,7 @@
         android:layout_width="468dp"
         android:layout_height="413dp"
         android:orientation="vertical"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -43,16 +44,14 @@
         <Button
             android:id="@+id/btnMatematica"
             android:text="Competencia 1" style="@style/opcBoton"
-
-
             app:icon="@android:drawable/ic_menu_sort_alphabetically"
-            app:iconPadding="1dp"
-            app:iconSize="70dp" />
+            app:iconPadding="10dp"
+            app:iconSize="70dp"
+            />
 
         <Button
             android:id="@+id/btnComunicacion"
             android:text="Competencia 2" style="@style/opcBoton"
-
             app:icon="@android:drawable/ic_menu_edit"
             app:iconSize="70dp"
             app:iconPadding="1dp"
@@ -61,7 +60,6 @@
         <Button
             android:id="@+id/btnHistoria"
             android:text="......" style="@style/opcBoton"
-
             app:icon="@android:drawable/ic_menu_edit"
             app:iconSize="70dp"
             app:iconPadding="1dp"

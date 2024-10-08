@@ -11,7 +11,7 @@
 
 
     <TextView
-        android:id="@+id/suma"
+        android:id="@+id/puntaje"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Aprende Sumando"
@@ -22,6 +22,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="23dp"
+        android:layout_height="41dp"
+        android:text="0"
+        android:textColor="#FFF"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintStart_toEndOf="@+id/puntaje"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.913" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -40,13 +54,11 @@
 
         <Button
             android:id="@+id/btn_num1"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:paddingHorizontal="15dp"
             android:paddingVertical="25dp"
+            style="@style/btnSumarNum"
             android:text="Num1"
-            android:textSize="35dp"
+            android:background="@drawable/color_boton"
             />
 
         <TextView
@@ -65,11 +77,11 @@
             android:id="@+id/btn_num2"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:paddingHorizontal="15dp"
             android:paddingVertical="25dp"
+            style="@style/btnSumarNum"
             android:text="Num2"
-            android:textSize="35dp"            />
+            android:background="@drawable/color_boton"/>
 
     </LinearLayout>
 
@@ -101,13 +113,11 @@
 
         <Button
             android:id="@+id/rpta1"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            style="@style/btnSumarpta"
             android:paddingHorizontal="15dp"
             android:paddingVertical="10dp"
             android:text="rpta1"
-            android:textSize="30dp" />
+            android:background="@drawable/color_boton"/>
 
         <TextView
             android:id="@+id/separata1"
@@ -123,13 +133,11 @@
 
         <Button
             android:id="@+id/rpta2"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            style="@style/btnSumarpta"
             android:paddingHorizontal="15dp"
             android:paddingVertical="10dp"
             android:text="rpta2"
-            android:textSize="30dp" />
+            android:background="@drawable/color_boton"/>
         <TextView
             android:id="@+id/separata2"
             android:layout_width="wrap_content"
@@ -144,13 +152,11 @@
 
         <Button
             android:id="@+id/rpta3"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            style="@style/btnSumarpta"
             android:paddingHorizontal="15dp"
             android:paddingVertical="10dp"
             android:text="rpta3"
-            android:textSize="30dp" />
+            android:background="@drawable/color_boton"/>
 
 
     </LinearLayout>

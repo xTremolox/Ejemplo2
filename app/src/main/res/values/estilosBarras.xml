@@ -4,7 +4,10 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">5dp</item>
-        <item name="android:textSize">44dp</item>
+        <item name="android:textSize">35dp</item>
+        <item name="android:padding">25dp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">@drawable/color_boton</item>
 
 
     </style>
