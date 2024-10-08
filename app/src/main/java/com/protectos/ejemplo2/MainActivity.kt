@@ -15,13 +15,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main) 
         Handler(Looper.getMainLooper()).postDelayed({
             // Iniciar la nueva actividad
             val intent = Intent(this, Pantalla_Principal::class.java)
             startActivity(intent)
+            overridePendingTransition(R.xml.fade_in, R.xml.fade_out)
             // Finalizar la actividad actual (opcional)
             finish()
+
         }, 3000)
 
 

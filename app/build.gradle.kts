@@ -46,6 +46,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation("com.google.android.material:material:1.12.0")
     implementation("org.quanqi:android-holo-graph:0.1.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

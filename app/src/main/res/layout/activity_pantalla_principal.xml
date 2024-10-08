@@ -5,7 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Pantalla_Principal">
+    tools:context=".Pantalla_Principal"
+    android:background="#ffffff"
+    >
+
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -20,7 +23,7 @@
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/imagen22" />
 
     </LinearLayout>
@@ -39,7 +42,7 @@
 
         <Button
             android:id="@+id/btnMatematica"
-            android:text="Matematica" style="@style/opcBoton"
+            android:text="Competencia 1" style="@style/opcBoton"
 
 
             app:icon="@android:drawable/ic_menu_sort_alphabetically"
@@ -48,7 +51,7 @@
 
         <Button
             android:id="@+id/btnComunicacion"
-            android:text="Comunicacion" style="@style/opcBoton"
+            android:text="Competencia 2" style="@style/opcBoton"
 
             app:icon="@android:drawable/ic_menu_edit"
             app:iconSize="70dp"
@@ -57,7 +60,7 @@
 
         <Button
             android:id="@+id/btnHistoria"
-            android:text="Historia" style="@style/opcBoton"
+            android:text="......" style="@style/opcBoton"
 
             app:icon="@android:drawable/ic_menu_edit"
             app:iconSize="70dp"
@@ -66,7 +69,7 @@
 
         <Button
             android:id="@+id/btnCiencias"
-            android:text="Ciencias" style="@style/opcBoton"
+            android:text="......." style="@style/opcBoton"
 
             app:icon="@android:drawable/ic_menu_edit"
             app:iconSize="70dp"

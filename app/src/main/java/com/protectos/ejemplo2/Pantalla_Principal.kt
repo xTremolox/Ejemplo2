@@ -15,10 +15,17 @@ class Pantalla_Principal : AppCompatActivity() {
         setContentView(R.layout.activity_pantalla_principal)
         //declaracion de boton para pasar al diagrama
         val btnBarra: Button = findViewById(R.id.btnMatematica)
+        val btnSuma: Button = findViewById(R.id.btnComunicacion)
 
         btnBarra.setOnClickListener{
             val accion = Intent(this,Diagrama_Barra::class.java)
             startActivity(accion)
+            overridePendingTransition(R.xml.fade_in, R.xml.fade_out)
+        }
+        btnSuma.setOnClickListener{
+            val accion = Intent(this,ActividadSuma::class.java)
+            startActivity(accion)
+            overridePendingTransition(R.xml.fade_in, R.xml.fade_out)
         }
     }
 }

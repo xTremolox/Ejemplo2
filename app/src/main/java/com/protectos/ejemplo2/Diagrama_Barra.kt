@@ -21,6 +21,7 @@ class Diagrama_Barra : AppCompatActivity() {
     //val  = findViewById<Button>(R.id.myButton)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         vinculo = ActivityDiagramaBarraBinding.inflate(layoutInflater)
         setContentView(vinculo.root)
 
@@ -38,6 +39,7 @@ class Diagrama_Barra : AppCompatActivity() {
         //val btnAgregar = findViewById<Button>(R.id.btnAgregar)
         //val etConcepto = findViewById<EditText>(R.id.etConcepto)
         //val etCantidad = findViewById<EditText>(R.id.etCantidad)
+
         vinculo.btnAgregar.setOnClickListener {
 
             graficarPuntos(puntos)
@@ -49,6 +51,7 @@ class Diagrama_Barra : AppCompatActivity() {
         }
 
     }
+    //metodo para graficar las barras
     fun graficarPuntos(puntos: ArrayList<Bar>){
         val barra = Bar()
         var color = generarColor()
@@ -61,7 +64,7 @@ class Diagrama_Barra : AppCompatActivity() {
         val grafica = findViewById<View>(R.id.Grafico) as BarGraph
         grafica.bars = puntos
     }
-
+    // Generar color aleatorio
     fun generarColor(): String {
         val letras = arrayOf("0", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F")
         var color = "#"

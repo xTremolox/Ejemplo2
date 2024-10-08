@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:paddingHorizontal="60dp"
+        android:paddingVertical="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/niv_image1"
+            style="@style/sumaNiveles"
+            android:onClick="nivel1"
+            app:srcCompat="@drawable/btn_clickbloqueado"
+
+             />
+
+        <ImageView
+            android:id="@+id/niv_image2"
+            style="@style/sumaNiveles"
+            android:contentDescription="Bloqueado"
+            android:onClick="Bloquedo"
+            app:srcCompat="@drawable/btn_clickbloqueado" />
+
+        <ImageView
+            android:id="@+id/niv_image3"
+            style="@style/sumaNiveles"
+            android:contentDescription="Bloqueado"
+            android:onClick="Bloquedo"
+            app:srcCompat="@drawable/btn_clickbloqueado" />
+
+        <ImageView
+            android:id="@+id/niv_image4"
+            style="@style/sumaNiveles"
+            android:contentDescription="Bloqueado"
+            android:onClick="Bloquedo"
+            app:srcCompat="@drawable/btn_clickbloqueado" />
+
+        <ImageView
+            android:id="@+id/niv_image5"
+            style="@style/sumaNiveles"
+            android:contentDescription="Bloqueado"
+            android:onClick="Bloquedo"
+            app:srcCompat="@drawable/btn_clickbloqueado" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingHorizontal="90dp"
+        android:paddingVertical="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/niv_image6"
+            style="@style/sumaNiveles"
+            android:contentDescription="Bloqueado"
+            android:onClick="Bloquedo"
+            app:srcCompat="@drawable/btn_clickbloqueado" />
+
+        <ImageView
+            android:id="@+id/niv_image7"
+            style="@style/sumaNiveles"
+            android:contentDescription="Bloqueado"
+            android:onClick="Bloquedo"
+            app:srcCompat="@drawable/btn_clickbloqueado" />
+
+        <ImageView
+            android:id="@+id/niv_image8"
+            style="@style/sumaNiveles"
+            android:contentDescription="Bloqueado"
+            android:onClick="Bloquedo"
+            app:srcCompat="@drawable/btn_clickbloqueado" />
+
+        <ImageView
+            android:id="@+id/niv_image9"
+            style="@style/sumaNiveles"
+            android:layout_width="wrap_content"
+            android:contentDescription="Bloqueado"
+            android:onClick="Bloquedo"
+            app:srcCompat="@drawable/btn_clickbloqueado" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            style="@style/sumaNiveles"
+            android:contentDescription="Bloqueado"
+            android:onClick="Bloquedo"
+            app:srcCompat="@drawable/btn_clickbloqueado" />
+
+    </LinearLayout>
+
+</LinearLayout>
