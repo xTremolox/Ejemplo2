@@ -1,0 +1,85 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:layout_centerInParent="true">
+
+    <!-- TextViews para mostrar resultados -->
+    <TextView
+        android:id="@+id/textCorrectas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correctas: 0"
+        android:textSize="30sp"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="100dp"/>
+
+    <TextView
+        android:id="@+id/textIncorrectas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incorrectas: 0"
+        android:textSize="30sp"
+        android:textColor="#fff"
+        android:layout_below="@id/textCorrectas"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textPuntaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Puntaje: 0%"
+        android:textSize="30sp"
+        android:textColor="#fff"
+        android:layout_below="@id/textIncorrectas"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Botón para aceptar y reiniciar el juego -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textPuntaje"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="50dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnReiniciar"
+            style="@style/btnSumarpta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/color_boton"
+            android:text=" Reintentar " />
+        <Button
+            android:id="@+id/btnMenu"
+            style="@style/btnSumarpta"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/color_boton"
+            android:text=" MENU " />
+
+        <Button
+            android:id="@+id/btnSiguiente"
+            style="@style/btnSumarpta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/color_boton"
+            android:text=" Siguiente " />
+    </LinearLayout>
+
+</RelativeLayout>

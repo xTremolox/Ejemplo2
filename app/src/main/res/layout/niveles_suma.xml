@@ -17,7 +17,7 @@
             style="@style/sumaNiveles"
             android:onClick="nivel1"
             android:contentDescription="activo"
-            app:srcCompat="@drawable/btn_clickbloqueado"
+            app:srcCompat="@drawable/btn_clicknivel1"
              />
 
         <ImageView
