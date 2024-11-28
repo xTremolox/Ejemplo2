@@ -6,27 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Pantalla_Principal"
-    android:background="#ffffff"
+    android:background="@drawable/fondoprincipal"
     >
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="260dp"
-        android:layout_height="416dp"
-        android:background="@color/white"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/imagen22" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -37,13 +21,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
         <Button
             android:id="@+id/btnMatematica"
-            android:text="Competencia 1" style="@style/opcBoton"
+            android:text="Diagrama de Barras" style="@style/opcBoton"
             app:icon="@android:drawable/ic_menu_sort_alphabetically"
             app:iconPadding="10dp"
             app:iconSize="70dp"
@@ -51,29 +34,11 @@
 
         <Button
             android:id="@+id/btnComunicacion"
-            android:text="Competencia 2" style="@style/opcBoton"
+            android:text="Aprende sumando" style="@style/opcBoton"
             app:icon="@android:drawable/ic_menu_edit"
             app:iconSize="70dp"
             app:iconPadding="1dp"
              />
-
-        <Button
-            android:id="@+id/btnHistoria"
-            android:text="......" style="@style/opcBoton"
-            app:icon="@android:drawable/ic_menu_edit"
-            app:iconSize="70dp"
-            app:iconPadding="1dp"
-            />
-
-        <Button
-            android:id="@+id/btnCiencias"
-            android:text="......." style="@style/opcBoton"
-
-            app:icon="@android:drawable/ic_menu_edit"
-            app:iconSize="70dp"
-            app:iconPadding="1dp"
-
-            />
 
     </LinearLayout>
 

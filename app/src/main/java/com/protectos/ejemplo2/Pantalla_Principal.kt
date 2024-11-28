@@ -14,7 +14,7 @@ class Pantalla_Principal : AppCompatActivity() {
         //declaracion de boton para pasar al diagrama
         val btnBarra: Button = findViewById(R.id.btnMatematica)
         val btnSuma: Button = findViewById(R.id.btnComunicacion)
-        val btntest: Button = findViewById(R.id.btnHistoria)
+
 
         btnBarra.setOnClickListener{
             val accion = Intent(this,Diagrama_Barra::class.java)
@@ -26,10 +26,6 @@ class Pantalla_Principal : AppCompatActivity() {
             startActivity(accion)
             overridePendingTransition(R.xml.fade_in, R.xml.fade_out)
         }
-        btntest.setOnClickListener{
-            val accion = Intent(this,Test1::class.java)
-            startActivity(accion)
-            overridePendingTransition(R.xml.fade_in, R.xml.fade_out)
-        }
+
     }
 }
