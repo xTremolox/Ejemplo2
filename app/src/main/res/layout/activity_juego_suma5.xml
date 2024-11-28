@@ -7,8 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
     android:orientation="vertical"
-    tools:context=".Actividad_JuegoSuma">
-
+    tools:context=".Actividad_JuegoSuma5">
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -214,5 +213,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/mal" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

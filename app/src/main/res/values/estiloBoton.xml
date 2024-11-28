@@ -2,24 +2,24 @@
 <resources>
     <style name="sumaNiveles">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_height">150dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:clickable">true</item>
         <item name="android:padding">5dp</item>
 
     </style>
     <style name="btnSumarpta">
-        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_width">170dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:textSize">30dp</item>
+        <item name="android:textSize">40dp</item>
         <item name="android:textColor">#fff</item>
     </style>
     <style name="btnSumarNum">
-        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_width">190dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:textSize">35dp</item>
+        <item name="android:textSize">50dp</item>
         <item name="android:textColor">#fff</item>
 
     </style>

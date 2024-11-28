@@ -4,11 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.bumptech.glide.Glide
 import com.protectos.ejemplo2.databinding.ActivityJuegoSuma3Binding
 import com.protectos.ejemplo2.databinding.ScoresumaBinding
 import kotlin.random.Random
@@ -24,7 +26,6 @@ class Actividad_JuegoSuma3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         vinculo= ActivityJuegoSuma3Binding.inflate(layoutInflater)
-
 
         setContentView(vinculo.root)
 
@@ -54,30 +55,57 @@ class Actividad_JuegoSuma3 : AppCompatActivity() {
         vinculo.rpta2.text = opciones[1].toString()
         vinculo.rpta3.text = opciones[2].toString()
     }
-    //
 
     private fun validar(rpta: Int) {
         if (rpta==suma) {
             correctAnswers++
 
             Toast.makeText(this, "CORRECTO", Toast.LENGTH_LONG).show()
-            vinculo.score.text = "$correctAnswers/10"
-            limpiar()
-
+            vinculo.score.text = "$correctAnswers/12"
+            //vinculo.score.text = correctAnswers.toString()
+            Glide.with(this).asGif().load(R.drawable.bien).into(vinculo.bien)
             Handler(Looper.getMainLooper()).postDelayed({
-                generateQuestion()
-            }, 300)
-            if (correctAnswers == 10) {
-                Toast.makeText(this, "¡Felicidades! Has acertado 10 veces.", Toast.LENGTH_LONG).show()
+                vinculo.bien.visibility = View.VISIBLE
+                // Ocultar después de un tiempo
+                Handler(Looper.getMainLooper()).postDelayed({
+                    vinculo.bien.visibility = View.INVISIBLE
+                }, 2500)
+            }, 1)
+            Handler(Looper.getMainLooper()).postDelayed({
+                limpiar()
+                Handler(Looper.getMainLooper()).postDelayed({
+                    generateQuestion()
+                }, 500)
+            }, 2000)
+
+            if (correctAnswers == 12) {
+                Toast.makeText(this, "¡Felicidades! Has acertado 12 veces.", Toast.LENGTH_LONG).show()
+                Handler(Looper.getMainLooper()).postDelayed({
+                    generateQuestion()
+                }, 1000)
 
                 finalJuego()
 
             }
+
         } else {
             incorrectAnswers++
             Toast.makeText(this, "INCORRECTO", Toast.LENGTH_LONG).show()
             //limpiar EditText
-            limpiar()
+            Glide.with(this).asGif().load(R.drawable.mal).into(vinculo.mal)
+            Handler(Looper.getMainLooper()).postDelayed({
+                vinculo.mal.visibility = View.VISIBLE
+                // Ocultar después de un tiempo
+                Handler(Looper.getMainLooper()).postDelayed({
+                    vinculo.mal.visibility = View.INVISIBLE
+                }, 2500)
+            }, 1)
+            Handler(Looper.getMainLooper()).postDelayed({
+                limpiar()
+                Handler(Looper.getMainLooper()).postDelayed({
+                    generateQuestion()
+                }, 500)
+            }, 2000)
             if (incorrectAnswers >= 5) {
                 Toast.makeText(this, "Has alcanzado el límite de errores.", Toast.LENGTH_LONG).show()
                 finalJuego()
@@ -85,10 +113,6 @@ class Actividad_JuegoSuma3 : AppCompatActivity() {
                     generateQuestion()
                 }, 300)
             }
-            Handler(Looper.getMainLooper()).postDelayed({
-                generateQuestion()
-            }, 300)
-
         }
     }
 

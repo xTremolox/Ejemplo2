@@ -10,56 +10,70 @@
     tools:context=".Actividad_JuegoSuma">
 
 
-    <TextView
-        android:id="@+id/puntaje"
+    <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aprende Sumando"
-        android:textSize="30dp"
-        android:textColor="#fff"
-        app:layout_constraintBottom_toTopOf="@id/linearLayout3"
+        android:layout_marginTop="180dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintHorizontal_bias="0.572"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/score"
-        android:layout_width="89dp"
-        android:layout_height="42dp"
-        android:text="0/12"
-        android:textColor="#FFF"
-        android:textSize="35dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.449"
-        app:layout_constraintStart_toEndOf="@+id/puntaje"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.913" />
+        <TextView
+            android:id="@+id/puntaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aprende Sumando"
+            android:textColor="#fff"
+            android:textSize="50dp"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/score"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="8dp"
+            android:textColor="#fff"
+            android:textSize="50dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/linearLayout3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/puntaje"
+            app:layout_constraintTop_toBottomOf="parent" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="188dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp"
         android:orientation="horizontal"
         android:paddingHorizontal="100dp"
-        android:paddingVertical="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent">
 
         <!--app:layout_constraintTop_toBottomOf="@+id/suma"-->
 
-        <Button
+        <TextView
             android:id="@+id/btn_num1"
             android:paddingHorizontal="15dp"
             android:paddingVertical="25dp"
             style="@style/btnSumarNum"
-            android:text="Num1"
-            android:background="@drawable/color_boton"
+            android:text="Nu1"
+            android:textSize="65dp"
             />
 
         <TextView
@@ -68,22 +82,22 @@
             android:layout_height="wrap_content"
             android:paddingHorizontal="25dp"
             android:text="+"
-            android:textSize="38dp"
+            android:textSize="50dp"
             android:textColor="#fff"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <TextView
             android:id="@+id/btn_num2"
-            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:paddingHorizontal="15dp"
             android:paddingVertical="25dp"
+            android:gravity="end"
             style="@style/btnSumarNum"
-            android:text="Num2"
-            android:background="@drawable/color_boton"/>
+            android:text="Nu2"
+            android:textSize="65dp"/>
 
     </LinearLayout>
 
@@ -91,19 +105,21 @@
         android:id="@+id/respuesa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="123dp"
+        android:layout_marginTop="50dp"
         android:paddingTop="8dp"
         android:text="¿cual es el resultado?"
         android:textSize="30dp"
         android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout3" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         android:paddingHorizontal="100dp"
         android:paddingVertical="5dp"
@@ -174,5 +190,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias="0.5"/>
+    <ImageView
+        android:id="@+id/bien"
+        android:layout_width="481dp"
+        android:layout_height="251dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bien" />
+    <ImageView
+        android:id="@+id/mal"
+        android:layout_width="481dp"
+        android:layout_height="251dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

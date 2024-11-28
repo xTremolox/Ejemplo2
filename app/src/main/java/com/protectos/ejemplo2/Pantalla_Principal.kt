@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class Pantalla_Principal : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +14,7 @@ class Pantalla_Principal : AppCompatActivity() {
         //declaracion de boton para pasar al diagrama
         val btnBarra: Button = findViewById(R.id.btnMatematica)
         val btnSuma: Button = findViewById(R.id.btnComunicacion)
+        val btntest: Button = findViewById(R.id.btnHistoria)
 
         btnBarra.setOnClickListener{
             val accion = Intent(this,Diagrama_Barra::class.java)
@@ -24,6 +23,11 @@ class Pantalla_Principal : AppCompatActivity() {
         }
         btnSuma.setOnClickListener{
             val accion = Intent(this,ActividadSuma::class.java)
+            startActivity(accion)
+            overridePendingTransition(R.xml.fade_in, R.xml.fade_out)
+        }
+        btntest.setOnClickListener{
+            val accion = Intent(this,Test1::class.java)
             startActivity(accion)
             overridePendingTransition(R.xml.fade_in, R.xml.fade_out)
         }
