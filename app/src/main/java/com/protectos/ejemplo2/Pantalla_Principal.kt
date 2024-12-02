@@ -26,6 +26,5 @@ class Pantalla_Principal : AppCompatActivity() {
             startActivity(accion)
             overridePendingTransition(R.xml.fade_in, R.xml.fade_out)
         }
-
     }
 }

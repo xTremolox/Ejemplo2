@@ -13,13 +13,137 @@
         android:theme="@style/Theme.Ejemplo2"
         tools:targetApi="31">
         <activity
-            android:name=".Actividad_JuegoSuma5"
+            android:name=".Actividad_Juego_Suma5_10"
             android:exported="false"
             android:screenOrientation="landscape"/>
         <activity
-            android:name=".Test1"
+            android:name=".Actividad_Juego_Suma5_9"
             android:exported="false"
             android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma5_8"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma5_7"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma5_6"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma5_5"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma5_4"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma5_3"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma5_2"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma5_1"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma4_8"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma4_7"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma4_6"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma4_5"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma4_4"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma4_3"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma4_2"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma4_1"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma3_7"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma3_6"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma3_5"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma3_4"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma3_3"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma3_2"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma3_1"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma2_6"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma2_5"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma2_4"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma2_3"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma2_2"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_Juego_Suma2_1"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Actividad_JuegoSuma5"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Test1"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Actividad_JuegoSuma4"
             android:exported="false"

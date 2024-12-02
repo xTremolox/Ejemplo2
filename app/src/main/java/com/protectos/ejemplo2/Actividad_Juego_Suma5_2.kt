@@ -4,21 +4,21 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.widget.Toast
 import android.view.View
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.protectos.ejemplo2.databinding.ActivityJuegoSumaBinding
-import com.protectos.ejemplo2.databinding.NivelesSumaBinding
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.bumptech.glide.Glide
+import com.protectos.ejemplo2.databinding.ActivityJuegoSuma37Binding
+import com.protectos.ejemplo2.databinding.ActivityJuegoSuma52Binding
 import com.protectos.ejemplo2.databinding.ScoresumaBinding
 import kotlin.random.Random
-import com.bumptech.glide.Glide
-import android.widget.ImageView
 
-class Actividad_JuegoSuma : AppCompatActivity() {
-    private lateinit var vinculo: ActivityJuegoSumaBinding
+class Actividad_Juego_Suma5_2 : AppCompatActivity() {
+    private lateinit var vinculo: ActivityJuegoSuma52Binding
     private lateinit var vinculo2: ScoresumaBinding
-    private lateinit var vinculo3: NivelesSumaBinding
     private var correctAnswers = 0
     private var incorrectAnswers = 0
     private var suma=0
@@ -26,11 +26,10 @@ class Actividad_JuegoSuma : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        vinculo3 = NivelesSumaBinding.inflate(layoutInflater)
-        vinculo= ActivityJuegoSumaBinding.inflate(layoutInflater)
+        vinculo= ActivityJuegoSuma52Binding.inflate(layoutInflater)
+
+
         setContentView(vinculo.root)
-
-
 
         generateQuestion()
 
@@ -45,10 +44,9 @@ class Actividad_JuegoSuma : AppCompatActivity() {
         }
 
     }
-
     private fun generateQuestion() {
-        val num1 = Random.nextInt(2, 8)
-        val num2 = Random.nextInt(2, 8)
+        val num1 = Random.nextInt(180000,250000)
+        val num2 = Random.nextInt(180000, 250000)
         vinculo.btnNum1.text = "$num1"
         vinculo.btnNum2.text = "$num2"
         suma=num1+num2
@@ -61,22 +59,12 @@ class Actividad_JuegoSuma : AppCompatActivity() {
     }
     //
 
-    //private fun checkAnswer1() {
-      //  var rpta= vinculo.rpta1.text.toString().toIntOrNull() ?: 0
-       // validar(rpta)    }
-    //private fun checkAnswer2() {
-      //  var rpta= vinculo.rpta2.text.toString().toIntOrNull() ?: 0
-        //validar(rpta)    }
-    //private fun checkAnswer3() {
-      //  var rpta= vinculo.rpta3.text.toString().toIntOrNull() ?: 0
-        //validar(rpta)    }
-
     private fun validar(rpta: Int) {
         if (rpta==suma) {
             correctAnswers++
 
             Toast.makeText(this, "CORRECTO", Toast.LENGTH_LONG).show()
-            vinculo.score.text = "$correctAnswers/8"
+            vinculo.score.text = "$correctAnswers/12"
             //vinculo.score.text = correctAnswers.toString()
             Glide.with(this).asGif().load(R.drawable.bien).into(vinculo.bien)
             Handler(Looper.getMainLooper()).postDelayed({
@@ -93,8 +81,8 @@ class Actividad_JuegoSuma : AppCompatActivity() {
                 }, 500)
             }, 2000)
 
-            if (correctAnswers == 8) {
-                Toast.makeText(this, "¡Felicidades! Has acertado 8 veces.", Toast.LENGTH_LONG).show()
+            if (correctAnswers == 12) {
+                Toast.makeText(this, "¡Felicidades! Has acertado 12 veces.", Toast.LENGTH_LONG).show()
                 Handler(Looper.getMainLooper()).postDelayed({
                     generateQuestion()
                 }, 1000)
@@ -180,9 +168,8 @@ class Actividad_JuegoSuma : AppCompatActivity() {
             correctAnswers = 0
             incorrectAnswers = 0
             vinculo.score.text = correctAnswers.toString()
-            vinculo3.nivImage2.setImageResource(R.drawable.btn_clicknivel2)
 
-            val accion = Intent(this,Actividad_juegoSuma2::class.java)
+            val accion = Intent(this,Actividad_Juego_Suma5_3::class.java)
             startActivity(accion)
             overridePendingTransition(R.xml.fade_in, R.xml.fade_out)
             Handler(Looper.getMainLooper()).postDelayed({
@@ -204,5 +191,4 @@ class Actividad_JuegoSuma : AppCompatActivity() {
         vinculo.rpta3.setText("")
         vinculo.rpta3.invalidate()
     }
-
 }

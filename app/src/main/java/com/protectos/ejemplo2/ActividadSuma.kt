@@ -29,8 +29,25 @@ class ActividadSuma : AppCompatActivity() {
         startActivity(accion)
         overridePendingTransition(R.xml.fade_in, R.xml.fade_out)
     }
-    fun Bloquedo(view: View){
-        val texto = view.contentDescription.toString()
-        Toast.makeText(this, "¡¡Nivel Bloquedo!!", Toast.LENGTH_SHORT).show()
+    fun nivel2(view: View){
+        val accion = Intent(this,Actividad_Juego_Suma2_1::class.java)
+        startActivity(accion)
+        overridePendingTransition(R.xml.fade_in, R.xml.fade_out)
     }
+    fun nivel3(view: View){
+        val accion = Intent(this,Actividad_Juego_Suma3_1::class.java)
+        startActivity(accion)
+        overridePendingTransition(R.xml.fade_in, R.xml.fade_out)
+    }
+    fun nivel4(view: View){
+        val accion = Intent(this,Actividad_Juego_Suma4_1::class.java)
+        startActivity(accion)
+        overridePendingTransition(R.xml.fade_in, R.xml.fade_out)
+    }
+    fun nivel5(view: View){
+        val accion = Intent(this,Actividad_Juego_Suma5_1::class.java)
+        startActivity(accion)
+        overridePendingTransition(R.xml.fade_in, R.xml.fade_out)
+    }
+
 }
