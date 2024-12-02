@@ -50,7 +50,7 @@ class Actividad_Juego_Suma3_5 : AppCompatActivity() {
         vinculo.btnNum2.text = "$num2"
         suma=num1+num2
 
-        val opciones = listOf(suma, suma + 1, suma + 2).shuffled()
+        val opciones = listOf(suma, suma + 100, suma + 2000).shuffled()
 
         vinculo.rpta1.text = opciones[0].toString()
         vinculo.rpta2.text = opciones[1].toString()
